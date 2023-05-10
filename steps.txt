@@ -1,0 +1,41 @@
+# step 1 : create local repository
+-> cd demo2
+
+# step 2 : initialisze the local repository 
+-> git init
+
+# step 3 : clone the remote repository to local system
+git clone  https://github.com/HAIL-cyber/MASTER.git
+
+# step : create branches
+-> git branch sub
+-> git branch lab1
+-> git branch lab2
+-> git branch lab3
+
+# step 4 : switch to lab1 branch and create required files
+-> git checkout lab1
+-> touch script1.sh script2.sh
+-> git add -A
+-> git commit -m "My first commit"
+-> git push -u https://github.com/HAIL-cyber/MASTER.git lab1 
+
+# step 5 : switch to lab2 branch and create required programs
+-> git checkout lab2
+-> touch program1.py program2.py
+-> git add -A
+-> git commit -m "My 2nd commit"
+-> git push -u https://github.com/HAIL-cyber/MASTER.git lab2
+
+# step 6 : switch to lab3 branch and create required text files
+-> git checkout lab3
+-> touch file1.txt file2.txt
+-> git add -A
+-> git commit -m "My 3rd commit"
+-> git push -u https://github.com/HAIL-cyber/MASTER.git lab3
+
+# step : switch to sub branch and merge lab1 , lab2 , lab3 to it.
+-> git merge lab1 lab2 lab3
+-> git add -A
+-> git commit -m "MY merge branches"
+-> git push -u https://github.com/HAIL-cyber/MASTER.git sub
